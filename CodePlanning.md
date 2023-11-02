@@ -10,7 +10,8 @@
 
 # I will first need to create a new class that will extend off of CrewMember and this class will be called Ship with the properties name, type, ability and crew.
 
-# Then i will create a function called enterShip in my CrewMember class that will be calling my other new function in my ship class that will .push crew members.
+# Then i will create a function called enterShip in my CrewMember class 
+# Then another function in the Ship class that will push crew to 'Enter the ship'
 
 # This should pass the second test 
 

@@ -18,38 +18,33 @@ class CrewMember {
     this.job = job;
     this.specialSkill = specialSkill;
   }
-  enterShip(ship) {
+
+  enterShip(ship){
     this.ship = ship;
     ship.addCrewMember(this);
   }
 }
 
-
-class Ship extends CrewMember {
+class Ship {
   constructor(name, type, ability, crew) {
-    super(name);
+    this.name = name;
     this.type = type;
     this.ability = ability;
-    this.crew = "";
+    this.crew = [];
   }
-  addCrewMember(crewMember) {
-    if (this.crew) {
-    this.crew.push(crewMember);
-    } else {
-    this.crew = [crewMember];
-    }
+
+  addCrewMember(crewMember){
+    this.crew.push(crewMember)
   }
 
   missionStatement() {
-    if (this.crew.length === 0){
+    if (this.crew.length === 0) {
       return "Can't perform a mission yet."
     } else {
       return this.ability;
     }
   }
-  
 }
-
 
 
 
